@@ -85,7 +85,52 @@ if __name__ == '__main__':
 
 잘 실행되는 모습입니다.
 
+### 패키지 관리
+#### npm
+npm은 디렉토리마다 json 파일로 간단하게 config 파일을 대체하는 방식으로, 패키지 정보를 확인하고 적용하기에 매우 간편합니다.
+
+명령: `npm init -y`를 통해서 패키지 초기화가 가능하고, 명령 한 번이면 package.json이 생성되며 사용할 준비가 끝납니다.
+
+#### pip
+Python의 패키지는 기본적으로 전역(global)에 설치되고, 패키지가 wrapping 되어 있지 않아서, '시스템'에서 의존합니다.
+
+매번 전역에 설치되는 패키지는 꽤 불편한 경험을 줍니다.
+
+다른 프로젝트에 좋지 않은 영향을 주는 것을 방지하기 위해서 버전 관리에도 더 신경써야 합니다.
+
+더구나, Python은 버전 간에 호환되지 않는 문제가 있어서 더 민감한 경우가 많습니다.
+
+npm처럼 전역 패키지를 '격리'하는 지역 단위의 패키지 관리 필요성이 대두되었고, 해결을 위해 venv와 같은 가상 환경을 사용하게 되었습니다.
+
+
+다만, node처럼 '디렉토리' 기반이 아니라, '환경' 기반입니다.
+
+여러 개의 디렉토리에서 사용할 수 있으며, OS마다 venv 환경에 접속하는 명령이 약간씩 다릅니다.
+
+#### freeze 명령
+freeze 명령을 통해 package.json과 같이 의존성 패키지 정보를 기입하고, 손쉽게 공유할 수 있습니다.
+
+명령: `pip freeze > requirements.txt`
+
+해당 명령을 실행하면, requirements.txt가 생성되고, 내부에 패키지 목록들을 리스트업합니다.
+
+```
+# requirements.txt
+
+blinker==1.7.0
+click==8.1.7
+colorama==0.4.6
+Flask==3.0.2
+itsdangerous==2.1.2
+Jinja2==3.1.3
+MarkupSafe==2.1.5
+Werkzeug==3.0.1
+
+```
+
 ### 참조
+공욱재 강사님 가이드
+
 https://www.daleseo.com/python-venv/
 
 https://yeko90.tistory.com/entry/%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EA%B8%B0%EC%B4%88-windows-%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EA%B0%80%EC%83%81%ED%99%98%EA%B2%BD-%EC%84%A4%EC%A0%95-%EB%B0%A9%EB%B2%95-%EB%B0%B0%EC%9A%B0%EA%B8%B0
