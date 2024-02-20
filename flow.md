@@ -30,3 +30,21 @@ VS Code의 PowerShell이 아닌, Command Prompt를 이용해 터미널을 열고
 가상 환경에서 세팅된 파이썬 버전을 알아보기 위해 다음 명령을 실행합니다.
 
 명령: `python --version`
+
+### 가상 환경에 패키지 설치
+
+#### 패키지 매니저(pip)
+
+파이썬 패키지 매니저는 pip 명령을 이용해 설치합니다.(Package Installer for Python)
+
+마찬가지로 다음 명령을 실행해 pip 버전도 확인 가능합니다.
+
+명령: `pip --version`
+
+nodejs를 설치하면 npm도 설치되어 사용 가능한 것처럼, Python을 설치하면 pip 매니저도 설치되는 것으로 보입니다.
+
+#### 패키지 설치
+
+다음 명령을 이용해, Express와 유사한 포지션의 Flask를 설치하고, 서빙 해보겠습니다.
+
+명령: `pip install flask`
