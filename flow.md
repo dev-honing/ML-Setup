@@ -45,6 +45,41 @@ nodejs를 설치하면 npm도 설치되어 사용 가능한 것처럼, Python을
 
 #### 패키지 설치
 
-다음 명령을 이용해, Express와 유사한 포지션의 Flask를 설치하고, 서빙 해보겠습니다.
+다음 명령을 이용해, Express와 유사한 포지션의 Flask를 설치하고, 서빙해보겠습니다.
 
 명령: `pip install flask`
+
+### 서빙하기
+
+#### app.py 
+
+app.py를 작성하고, 아래와 같이 Hello, Flask! 출력을 시도합니다.
+
+
+```
+# app.py
+
+from flask import Flask # Flask 모듈 import
+
+# Flask 애플리케이션 생성
+app = Flask(__name__)
+
+# 루트 URL에 대한 핸들러
+@app.route('/')
+def hello():
+    return 'Hello, Flask!'
+
+# 서버 실행
+if __name__ == '__main__':
+    app.run()
+```
+
+#### 가상 환경에서 실행
+
+아래의 명령을 실행해 가상 환경에서 서버를 실행했습니다.
+
+명령: `python app.py`
+
+![스크린샷](image.png)
+
+잘 실행되는 모습입니다.
