@@ -84,3 +84,8 @@ if __name__ == '__main__':
 ![스크린샷](image.png)
 
 잘 실행되는 모습입니다.
+
+### 참조
+https://www.daleseo.com/python-venv/
+
+https://yeko90.tistory.com/entry/%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EA%B8%B0%EC%B4%88-windows-%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EA%B0%80%EC%83%81%ED%99%98%EA%B2%BD-%EC%84%A4%EC%A0%95-%EB%B0%A9%EB%B2%95-%EB%B0%B0%EC%9A%B0%EA%B8%B0
